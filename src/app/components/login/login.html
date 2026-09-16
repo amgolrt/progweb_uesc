@@ -1,0 +1,34 @@
+<div class="login-wrapper">
+  <form (ngSubmit)="onEntrar()" class="login-card">
+    <div class="top-link">
+      <a href="#" (click)="onCriarConta($event)">Criar conta</a>
+    </div>
+
+    <div class="input-group">
+      <input
+        type="email"
+        name="email"
+        placeholder="E-mail"
+        [(ngModel)]="loginData.email"
+        required
+      />
+    </div>
+
+    <div class="input-group">
+      <input
+        type="password"
+        name="senha"
+        placeholder="Senha"
+        [(ngModel)]="loginData.senha"
+        required
+      />
+    </div>
+
+    <div class="recovery-link">
+      <a href="#" (click)="onEsqueciSenha($event)">Esqueci a senha</a>
+    </div>
+
+    <button type="submit" class="btn-submit">ENTRAR</button>
+  </form>
+</div>
+```
